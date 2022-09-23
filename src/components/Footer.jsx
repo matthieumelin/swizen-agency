@@ -47,23 +47,7 @@ export default function Footer() {
         </Infos>
         <Sections>
           <Section>
-            <SectionTitle>Nos services</SectionTitle>
-            <SectionMenu>
-              <SectionMenuItem>
-                <SectionMenuLink to="/">Lorem ipsum</SectionMenuLink>
-              </SectionMenuItem>
-            </SectionMenu>
-          </Section>
-          <Section>
-            <SectionTitle>L'agence</SectionTitle>
-            <SectionMenu>
-              <SectionMenuItem>
-                <SectionMenuLink to="/">Lorem ipsum</SectionMenuLink>
-              </SectionMenuItem>
-            </SectionMenu>
-          </Section>
-          <Section>
-            <SectionTitle>Nos réseaux</SectionTitle>
+            <SectionTitle>Suivez-nous</SectionTitle>
             <SectionMenu>
               <SectionMenuItem>
                 <SectionMenuLink to="/">&#62; Instagram</SectionMenuLink>
@@ -75,6 +59,9 @@ export default function Footer() {
           </Section>
         </Sections>
       </Content>
+      <Copyright>
+        <CopyrightText>Copyright © 2020 - 2022 Swizen Tous droits réservés - Mentions Légales</CopyrightText>
+      </Copyright>
     </StyledFooter>
   );
 }
@@ -153,4 +140,15 @@ const SectionMenuLink = styled(Link)`
   text-decoration: none;
   color: white;
   font-weight: 300;
+`;
+
+const Copyright = styled.div`
+padding: 20px;
+background-color: #212529;
+`;
+const CopyrightText = styled.p`
+color: rgba(255, 255, 255, 0.5);
+text-transform: uppercase;
+text-align: center;
+margin: 0;
 `;
