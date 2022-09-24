@@ -12,39 +12,41 @@ export default function Footer() {
   return (
     <StyledFooter>
       <Content>
-        <Logo src={LogoWhite} alt="Swizen" />
-        <Description>
-          Votre agence web à Lens spécialisée dans la création de internet.
-        </Description>
-        <Infos>
-          <InfoItem>
-            <InfoIcon>
-              <MapPointerIcon
-                fill="white"
-                style={{ width: 18, margin: "0 10px 0 0" }}
-              />
-            </InfoIcon>
-            128 Av. Alfred Maes, 62300 Lens
-          </InfoItem>
-          <InfoItem>
-            <InfoIcon>
-              <MailIcon
-                fill="white"
-                style={{ width: 18, margin: "0 10px 0 0" }}
-              />
-            </InfoIcon>
-            agence@swizen.fr
-          </InfoItem>
-          <InfoItem>
-            <InfoIcon>
-              <PhoneIcon
-                fill="white"
-                style={{ width: 18, margin: "0 10px 0 0" }}
-              />
-            </InfoIcon>
-            06.83.40.61.65
-          </InfoItem>
-        </Infos>
+        <Wrapper>
+          <Logo src={LogoWhite} alt="Swizen" />
+          <Description>
+            Votre agence web à Lens spécialisée dans la création de internet.
+          </Description>
+          <Infos>
+            <InfoItem>
+              <InfoIcon>
+                <MapPointerIcon
+                  fill="white"
+                  style={{ width: 18, margin: "0 10px 0 0" }}
+                />
+              </InfoIcon>
+              128 Av. Alfred Maes, 62300 Lens
+            </InfoItem>
+            <InfoItem>
+              <InfoIcon>
+                <MailIcon
+                  fill="white"
+                  style={{ width: 18, margin: "0 10px 0 0" }}
+                />
+              </InfoIcon>
+              agence@swizen.fr
+            </InfoItem>
+            <InfoItem>
+              <InfoIcon>
+                <PhoneIcon
+                  fill="white"
+                  style={{ width: 18, margin: "0 10px 0 0" }}
+                />
+              </InfoIcon>
+              06.83.40.61.65
+            </InfoItem>
+          </Infos>
+        </Wrapper>
         <Sections>
           <Section>
             <SectionTitle>Suivez-nous</SectionTitle>
@@ -72,6 +74,14 @@ const StyledFooter = styled.footer`
 
 const Content = styled.div`
   padding: 20px;
+
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    justify-content: space-between;
+  }
+  `;
+
+const Wrapper = styled.div`
 `;
 
 const Logo = styled.img`
@@ -109,26 +119,20 @@ const Sections = styled.div`
 
 const Section = styled.section``;
 
-const SectionTitle = styled.h4`
+const SectionTitle = styled.h3`
   color: white;
   font-weight: 500;
   margin: 0 0 10px 0;
-  position: relative;
-  &::after {
-    position: absolute;
-    left: 0;
-    top: 30px;
-    background-color: white;
-    height: 1px;
-    width: 30px;
-    content: "";
-  }
 `;
 
 const SectionMenu = styled.ul`
   padding: 0;
   margin: 0;
   list-style: none;
+
+  @media screen and (min-width: 1024px) {
+    width: 500px;
+  }
 `;
 
 const SectionMenuItem = styled.li`
@@ -143,7 +147,7 @@ const SectionMenuLink = styled(Link)`
 `;
 
 const Copyright = styled.div`
-padding: 20px;
+padding: 10px;
 background-color: #212529;
 `;
 const CopyrightText = styled.p`

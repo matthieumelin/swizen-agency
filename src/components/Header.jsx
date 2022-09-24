@@ -56,7 +56,6 @@ const Navbar = styled.nav`
   @media screen and (min-width: 1024px) {
     display: flex;
     align-items: center;
-    justify-content: space-between;
   }
 `;
 const NavbarWrapper = styled.div`
@@ -138,6 +137,11 @@ const NavbarButton = styled(Link)`
     transition: 0.2s;
     background-color: ${Colors.LightBlue};
   }
+
+  @media screen and (min-width: 1024px) {
+    position: absolute;
+    right: 20px;
+  }
 `;
 
 const Menu = styled.ul`
@@ -153,11 +157,14 @@ const Menu = styled.ul`
   overflow: hidden;
 
   @media screen and (min-width: 1024px) {
-    max-height: 300px;
-    margin: 0;
+    max-height: initial;
+    margin: 20px;
     display: flex;
     align-items: center;
     gap: 60px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 `;
 
@@ -165,7 +172,13 @@ const MenuItem = styled.li``;
 
 const MenuLink = styled(NavLink)`
   text-decoration: none;
-  color: black;
+  color: ${Colors.DarkBlue};
+  transition: 0.2s;
+
+  &:hover {
+    color: ${Colors.LightBlue};
+    transition: 0.2s;
+  }
 `;
 
 const Content = styled.div`

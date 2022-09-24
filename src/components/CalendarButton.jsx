@@ -29,6 +29,7 @@ const StyledCalendarButton = styled(PopupButton)`
   box-shadow: 0px 0px 30px rgb(0 0 0 / 40%);
   transition: 0.2s;
   display: none;
+  cursor: pointer;
 
   &:hover {
     transition: 0.2s;

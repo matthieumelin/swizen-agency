@@ -87,6 +87,7 @@ const ContactForm = styled.form`
   background-size: cover;
   background-repeat: no-repeat;
   padding: 20px;
+  height: 100%;
 `;
 const ContactFormContainer = styled.div`
   background-color: white;
@@ -98,6 +99,8 @@ const ContactFormContainer = styled.div`
   animation-duration: 1s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  max-width: 768px;
+  margin: 0 auto;
 
   @keyframes slide {
     0% {
@@ -112,8 +115,15 @@ const ContactFormTitle = styled.h2`
   margin: 0 0 10px 0;
   text-align: center;
   font-weight: 300;
+  color: ${Colors.DarkBlue};
 `;
-const ContactFormWrapper = styled.div``;
+const ContactFormWrapper = styled.div`
+@media screen and (min-width: 1024px) {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+`;
 const ContactFormSubject = styled.select`
 `;
 const ContactFormSubjectOption = styled.option`
@@ -122,9 +132,11 @@ const ContactFormGroup = styled.div`
   display: flex;
   flex-direction: column;
   margin: 10px 0;
+  width: 100%;
 `;
 const ContactFormLabel = styled.label`
   margin: 0 0 5px 0;
+  color: ${Colors.DarkBlue};
 `;
 const ContactFormInput = styled.input`
   border: none;
@@ -133,6 +145,8 @@ const ContactFormInput = styled.input`
   font-family: inherit;
   outline: none;
   transition: 0.2s;
+  box-sizing: border-box;
+  color: ${Colors.DarkBlue};
 
   &:focus {
     border-bottom: 1px solid ${Colors.Blue};
@@ -148,6 +162,8 @@ const ContactFormTextArea = styled.textarea`
   font-family: inherit;
   outline: none;
   transition: 0.2s;
+  box-sizing: border-box;
+  color: ${Colors.DarkBlue};
 
   &:focus {
     border-bottom: 1px solid ${Colors.Blue};
