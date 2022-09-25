@@ -188,7 +188,7 @@ const Content = styled.div`
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 100px 50px;
+    padding: 100px 50px 0 50px;
   }
 `;
 const WavesImage = styled.img`
@@ -218,8 +218,8 @@ const Image = styled.img`
   display: none;
   width: 50%;
   margin: 0 auto;
-	transform: translatey(0px);
-	animation: float 6s ease-in-out infinite;
+  transform: translatey(0px);
+  animation: float 6s ease-in-out infinite;
 
   @media screen and (min-width: 1024px) {
     display: block;
