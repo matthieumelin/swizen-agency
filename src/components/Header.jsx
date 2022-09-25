@@ -3,8 +3,9 @@ import { Link, NavLink } from "react-router-dom";
 
 import styled from "styled-components";
 
-import LogoDark from "../assets/images/logo-dark.png";
-import Office from "../assets/images/office.jpg";
+import LogoWhite from "../assets/images/logo-white.png";
+import Agency from "../assets/images/agency.png";
+import Waves from "../assets/images/waves.svg";
 
 import Colors from "../utils/Colors";
 
@@ -15,10 +16,9 @@ export default function Header() {
       <Navbar>
         <NavbarWrapper>
           <NavbarLeft>
-            <NavbarLogo src={LogoDark} alt="Swizen" />
+            <NavbarLogo src={LogoWhite} alt="Swizen" />
           </NavbarLeft>
           <NavbarRight>
-            <NavbarButton to="/">Demander un devis 📄</NavbarButton>
             <NavbarToggle
               navbarIsOpen={navbarIsOpen}
               onClick={() => setNavbarIsOpen(!navbarIsOpen)}
@@ -41,14 +41,32 @@ export default function Header() {
         </Menu>
       </Navbar>
       <Content>
-        <Slogan>Votre agence web à Lens</Slogan>
-        <Image src={Office} alt="Bureaux" />
+        <About>
+          <Title>
+            <TitleSpan>Swizen,</TitleSpan>
+            <Break /> Votre agence web à Lens
+          </Title>
+          <Description>
+            Design, Développement web, E-commerce, Maintenance & SEO.
+            <Break />
+            Notre agence web est spécialisée dans la création de site internet
+            sur-mesure.
+          </Description>
+        </About>
+        <Image src={Agency} alt="Image by pch.vector on Freepik" />
       </Content>
+      <WavesImage src={Waves} alt="Vagues" />
     </StyledHeader>
   );
 }
 
-const StyledHeader = styled.header``;
+const StyledHeader = styled.header`
+  background: linear-gradient(
+    180deg,
+    rgba(7, 106, 255, 1) 0%,
+    rgba(26, 117, 255, 1) 100%
+  );
+`;
 
 const Navbar = styled.nav`
   padding: 20px;
@@ -62,11 +80,12 @@ const NavbarWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 10px;
 `;
 const NavbarToggle = styled.div`
   position: relative;
   background-color: ${(props) =>
-    props.navbarIsOpen ? Colors.DarkBlueOpaque : Colors.DarkBlue};
+    props.navbarIsOpen ? Colors.WhiteOpaque : "#fff"};
   height: 1px;
   width: 20px;
   -webkit-transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
@@ -88,7 +107,7 @@ const NavbarToggle = styled.div`
     position: absolute;
     width: inherit;
     height: inherit;
-    background-color: ${Colors.DarkBlue};
+    background-color: #fff;
     top: ${(props) => (props.navbarIsOpen ? "0px" : "-5px")};
     transform: ${(props) => (props.navbarIsOpen ? "rotate(405deg)" : null)};
   }
@@ -105,7 +124,7 @@ const NavbarToggle = styled.div`
     content: "";
     width: inherit;
     height: inherit;
-    background-color: ${Colors.DarkBlue};
+    background-color: #fff;
     top: ${(props) => (props.navbarIsOpen ? "0px" : "5px")};
     transform: ${(props) => (props.navbarIsOpen ? "rotate(-405deg)" : null)};
   }
@@ -116,32 +135,13 @@ const NavbarToggle = styled.div`
 `;
 const NavbarLogo = styled.img`
   display: block;
-  width: 100px;
+  max-width: 150px;
 `;
 const NavbarLeft = styled.div``;
 const NavbarRight = styled.div`
   display: flex;
   align-items: center;
-  gap: 20px;
-`;
-const NavbarButton = styled(Link)`
-  background-color: ${Colors.Blue};
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-  border-radius: 20px;
-  transition: 0.2s;
-  box-shadow: 0px 0px 30px rgb(0 0 0 / 40%);
-
-  &:hover {
-    transition: 0.2s;
-    background-color: ${Colors.LightBlue};
-  }
-
-  @media screen and (min-width: 1024px) {
-    position: absolute;
-    right: 20px;
-  }
+  gap: 0 10px;
 `;
 
 const Menu = styled.ul`
@@ -172,11 +172,11 @@ const MenuItem = styled.li``;
 
 const MenuLink = styled(NavLink)`
   text-decoration: none;
-  color: ${Colors.DarkBlue};
+  color: white;
   transition: 0.2s;
 
   &:hover {
-    color: ${Colors.LightBlue};
+    margin: 0 0 5px 0;
     transition: 0.2s;
   }
 `;
@@ -184,27 +184,60 @@ const MenuLink = styled(NavLink)`
 const Content = styled.div`
   padding: 20px;
 
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
-    padding: 20px 60px;
+    gap: 20px;
+    padding: 100px 50px;
   }
 `;
-
-const Slogan = styled.h1`
-  color: ${Colors.Blue};
-  text-align: center;
-  
+const WavesImage = styled.img`
+  display: block;
+`;
+const About = styled.div`
   @media screen and (min-width: 1024px) {
-    font-size: 3.5rem;
+    padding: 0 20px;
   }
+`;
+const Title = styled.h1`
+  color: #fff;
+  margin: 0;
+
+  @media screen and (min-width: 768px) {
+    font-size: 3rem;
+  }
+`;
+const Break = styled.br``;
+const TitleSpan = styled.span`
+  color: ${Colors.DarkGray};
+`;
+const Description = styled.p`
+  color: #fff;
 `;
 const Image = styled.img`
   display: none;
   width: 50%;
   margin: 0 auto;
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
 
   @media screen and (min-width: 1024px) {
     display: block;
+    border-radius: 100px 20px 100px 20px;
+    height: 250px;
+    object-fit: cover;
+    box-shadow: 0 0 30px rgb(0 0 0 / 7%);
+  }
+
+  @keyframes float {
+    0% {
+      transform: translatey(0px);
+    }
+    50% {
+      transform: translatey(-20px);
+    }
+    100% {
+      transform: translatey(0px);
+    }
   }
 `;

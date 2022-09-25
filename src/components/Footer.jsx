@@ -7,6 +7,7 @@ import LogoWhite from "../assets/images/logo-white.png";
 import { ReactComponent as MailIcon } from "../assets/icons/mail-icon.svg";
 import { ReactComponent as MapPointerIcon } from "../assets/icons/map-pointer-icon.svg";
 import { ReactComponent as PhoneIcon } from "../assets/icons/phone-icon.svg";
+import Colors from "../utils/Colors";
 
 export default function Footer() {
   return (
@@ -69,7 +70,7 @@ export default function Footer() {
 }
 
 const StyledFooter = styled.footer`
-  background-color: #353535;
+  background-color: ${Colors.Gray};
 `;
 
 const Content = styled.div`
@@ -85,8 +86,8 @@ const Wrapper = styled.div`
 `;
 
 const Logo = styled.img`
-  width: 100px;
-  display: block;
+max-width: 150px;
+display: block;
 `;
 
 const Description = styled.p`
@@ -148,7 +149,7 @@ const SectionMenuLink = styled(Link)`
 
 const Copyright = styled.div`
 padding: 10px;
-background-color: #212529;
+background-color: ${Colors.DarkGray};
 `;
 const CopyrightText = styled.p`
 color: rgba(255, 255, 255, 0.5);
