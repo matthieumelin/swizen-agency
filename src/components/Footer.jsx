@@ -63,7 +63,7 @@ export default function Footer() {
         </Sections>
       </Content>
       <Copyright>
-        <CopyrightText>Copyright © 2020 - 2022 Swizen Tous droits réservés - Mentions Légales</CopyrightText>
+        <CopyrightText>Copyright © 2020 - 2022 Swizen Tous droits réservés - <CopyrightLink to="/">Mentions Légales</CopyrightLink></CopyrightText>
       </Copyright>
     </StyledFooter>
   );
@@ -153,7 +153,16 @@ background-color: ${Colors.DarkGray};
 `;
 const CopyrightText = styled.p`
 color: rgba(255, 255, 255, 0.5);
-text-transform: uppercase;
 text-align: center;
 margin: 0;
+`;
+const CopyrightLink = styled(Link)`
+color: ${Colors.Blue};
+text-decoration: none;
+transition: 0.2s;
+
+&:hover {
+  transition: 0.2s;
+  color: ${Colors.LightBlue};
+}
 `;
