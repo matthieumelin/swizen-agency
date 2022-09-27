@@ -1,34 +1,50 @@
-[
-  {
-    "name": "Stratégie digitale",
-    "description": "Nous vous accompagnons dans la création d'une stratégie et nous vous conseillons afin de la rendre toujours plus pertinente."
-  },
-  {
-    "name": "Création de site internet",
-    "description": "Notre agence web est spécialisée dans le développement de sites sous Wordpress."
-  },
-  {
-    "name": "Développement de site internet",
-    "description": "Notre expérience en développement web nous permet de répondre aux besoins les plus complexes."
-  },
-  {
-    "name": "Création de boutique en ligne",
-    "description": "Notre agence web est spécialisée dans le développement de site e-commerce avec Shopify et Wordpress."
-  },
-  {
-    "name": "Migration / Refonte de site",
-    "description": "Nous vous accompagnons pour votre migration ou refonte de site internet."
-  },
-  {
-    "name": "UX Design",
-    "description": "Nous développons des interfaces attrayantes pour vous distinguer de vos concurrents."
-  },
-  {
-    "name": "Référencement SEO",
-    "description": "Nous travaillons le référencement naturel de votre site internet sur les moteurs de recherche afin d'optimiser votre visibilité et votre acquisition de trafic."
-  },
-  {
-    "name": "Maintenance",
-    "description": "Nous vous accompagons dans l'amélioration des performances, les corrections des failles de sécurité et la maintenance de votre site internet."
-  }
-]
+{
+  "services": [
+    {
+      "name": "Stratégie digitale",
+      "description": "Nous vous accompagnons dans la création d'une stratégie et nous vous conseillons afin de la rendre toujours plus pertinente."
+    },
+    {
+      "name": "Création de site internet",
+      "description": "Notre agence web est spécialisée dans le développement de sites sous Wordpress."
+    },
+    {
+      "name": "Développement de site internet",
+      "description": "Notre expérience en développement web nous permet de répondre aux besoins les plus complexes."
+    },
+    {
+      "name": "Création de boutique en ligne",
+      "description": "Notre agence web est spécialisée dans le développement de site e-commerce avec Shopify et Wordpress."
+    },
+    {
+      "name": "Migration / Refonte de site",
+      "description": "Nous vous accompagnons pour votre migration ou refonte de site internet."
+    },
+    {
+      "name": "UX Design",
+      "description": "Nous développons des interfaces attrayantes pour vous distinguer de vos concurrents."
+    },
+    {
+      "name": "Référencement SEO",
+      "description": "Nous travaillons le référencement naturel de votre site internet sur les moteurs de recherche afin d'optimiser votre visibilité et votre acquisition de trafic."
+    },
+    {
+      "name": "Maintenance",
+      "description": "Nous vous accompagons dans l'amélioration des performances, les corrections des failles de sécurité et la maintenance de votre site internet."
+    }
+  ],
+  "tools": [
+    {
+      "logo": "https://s.w.org/style/images/about/WordPress-logotype-standard.png",
+      "description": "WordPress est le logiciel de contenu le plus populaire au monde."
+    },
+    {
+      "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Shopify_logo.svg/800px-Shopify_logo.svg.png",
+      "description": "Shopify accompagne plus d'un million de marchands dans le monde."
+    },
+    {
+      "logo": "https://quintagroup.com/cms/js/js-image/react.js-logo.png/@@images/a9bf22bd-373a-4fae-a900-c22fd12c87c7.png",
+      "description": "React est le framework javascript le plus populaire au monde."
+    }
+  ]
+}

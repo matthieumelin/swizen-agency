@@ -209,6 +209,7 @@ const Content = styled.div`
 `;
 const WavesImage = styled.img`
   display: block;
+  pointer-events: none
 `;
 const About = styled.div`
   @media screen and (min-width: 1024px) {

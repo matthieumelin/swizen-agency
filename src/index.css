@@ -34,3 +34,11 @@ code {
   background-color: #0066FF;
   border-radius: 20px;
 }
+::selection {
+  background: #0066FF;
+  color: white;
+}
+::-moz-selection {
+  background: #0066FF;
+  color: white;
+}

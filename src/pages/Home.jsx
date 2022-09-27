@@ -11,10 +11,12 @@ import AgencyBg from "../assets/images/agency2.png";
 
 import Colors from "../utils/Colors";
 import ServiceCard from "../components/ServiceCard";
+import ToolCard from "../components/ToolCard";
 
 export default function Home({
   currentLocation,
   services,
+  tools,
   setCurrentLocation,
 }) {
   const onSubmit = (event) => {
@@ -28,7 +30,7 @@ export default function Home({
       />
       <Main>
         <Agency>
-          <Title>
+          <Title align="center">
             L'agence <TitleSpan>Swizen</TitleSpan>
           </Title>
           <AgencyImage
@@ -43,7 +45,7 @@ export default function Home({
           </Description>
         </Agency>
         <Services>
-          <Title>
+          <Title align="center">
             Nos services d'<TitleSpan>agence web</TitleSpan>
           </Title>
           <Description>
@@ -57,6 +59,22 @@ export default function Home({
             })}
           </ServicesContent>
         </Services>
+        <Tools>
+          <Title align="center">
+            Découvrez nos
+            <TitleSpan> expertises</TitleSpan>
+          </Title>
+          <Description>
+            Afin de vous délivrer le meilleur des services, nous travaillons
+            avec des CMS et Framework existants. Nous voulons vous proposer la
+            solution la plus adaptée à votre projet.
+          </Description>
+          <ToolsContent>
+            {tools.map((tool, key) => {
+              return <ToolCard key={key} data={tool} />;
+            })}
+          </ToolsContent>
+        </Tools>
         <CalendarButton />
       </Main>
       <Footer />
@@ -73,7 +91,7 @@ const Description = styled.p`
   color: ${Colors.DarkGray};
 `;
 const Title = styled.h2`
-  text-align: center;
+  text-align: ${(props) => props.align};
   color: ${Colors.DarkGray};
   margin: 0 0 20px 0;
 
@@ -119,4 +137,19 @@ const ServicesContent = styled.div`
   @media screen and (min-width: 1024px) {
     grid-template-columns: repeat(4, 1fr);
   }
+`;
+const Tools = styled.section`
+padding: 20px;
+
+@media screen and (min-width: 1024px) {
+  padding: 60px 0;
+}
+`;
+const ToolsContent = styled.div`
+margin: 30px 0 0 0;
+
+@media screen and (min-width: 1024px) {
+  display: flex;
+  justify-content: center;
+}
 `;

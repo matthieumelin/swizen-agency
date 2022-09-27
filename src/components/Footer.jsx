@@ -52,18 +52,35 @@ export default function Footer() {
           <Section>
             <SectionTitle>Suivez-nous</SectionTitle>
             <SectionMenu>
-              <SectionMenuItem>
-                <SectionMenuLink to="/">&#62; Instagram</SectionMenuLink>
+              <SectionMenuItem
+                onClick={() =>
+                  window.open(
+                    "https://www.instagram.com/swizen.agency",
+                    "_blank"
+                  )
+                }
+              >
+                &#62; Instagram
               </SectionMenuItem>
-              <SectionMenuItem>
-                <SectionMenuLink to="/">&#62; Facebook</SectionMenuLink>
+              <SectionMenuItem
+                onClick={() =>
+                  window.open(
+                    "https://www.linkedin.com/company/swizen-agency",
+                    "_blank"
+                  )
+                }
+              >
+                &#62; LinkedIn
               </SectionMenuItem>
             </SectionMenu>
           </Section>
         </Sections>
       </Content>
       <Copyright>
-        <CopyrightText>Copyright © 2020 - 2022 Swizen Tous droits réservés - <CopyrightLink to="/">Mentions Légales</CopyrightLink></CopyrightText>
+        <CopyrightText>
+          Copyright © 2020 - 2022 Swizen Tous droits réservés -{" "}
+          <CopyrightLink to="/">Mentions Légales</CopyrightLink>
+        </CopyrightText>
       </Copyright>
     </StyledFooter>
   );
@@ -80,14 +97,13 @@ const Content = styled.div`
     display: flex;
     justify-content: space-between;
   }
-  `;
-
-const Wrapper = styled.div`
 `;
 
+const Wrapper = styled.div``;
+
 const Logo = styled.img`
-max-width: 150px;
-display: block;
+  max-width: 150px;
+  display: block;
 `;
 
 const Description = styled.p`
@@ -137,8 +153,9 @@ const SectionMenu = styled.ul`
 `;
 
 const SectionMenuItem = styled.li`
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
+  color: white;
 `;
 
 const SectionMenuLink = styled(Link)`
@@ -148,21 +165,21 @@ const SectionMenuLink = styled(Link)`
 `;
 
 const Copyright = styled.div`
-padding: 10px;
-background-color: ${Colors.DarkGray};
+  padding: 10px;
+  background-color: ${Colors.DarkGray};
 `;
 const CopyrightText = styled.p`
-color: rgba(255, 255, 255, 0.5);
-text-align: center;
-margin: 0;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  margin: 0;
 `;
 const CopyrightLink = styled(Link)`
-color: ${Colors.Blue};
-text-decoration: none;
-transition: 0.2s;
-
-&:hover {
+  color: ${Colors.Blue};
+  text-decoration: none;
   transition: 0.2s;
-  color: ${Colors.LightBlue};
-}
+
+  &:hover {
+    transition: 0.2s;
+    color: ${Colors.LightBlue};
+  }
 `;
