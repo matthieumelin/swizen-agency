@@ -21,6 +21,7 @@ export default function AppRouter() {
   return (
     <Router>
       <Routes>
+        <Route path="/404" element={<NotFound />} />
         <Route
           index
           element={

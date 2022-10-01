@@ -75,6 +75,10 @@ export default function Home({
             })}
           </ToolsContent>
         </Tools>
+        <Contact>
+          <Title style={{color: "white"}}>Nous contactez</Title>
+          <Description></Description>
+        </Contact>
         <CalendarButton />
       </Main>
       <Footer />
