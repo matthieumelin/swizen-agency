@@ -149,7 +149,7 @@ const ToolsContent = styled.div`
 margin: 30px 0 0 0;
 
 @media screen and (min-width: 1024px) {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 `;
