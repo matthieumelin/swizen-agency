@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -9,6 +10,9 @@ import Colors from "../utils/Colors";
 export default function Legal() {
   return (
     <StyledLegal>
+      <Helmet>
+        <title>Agence web à Lens - Création de site internet | SWIZEN</title>
+      </Helmet>
       <Header />
       <Main>
         <Paragraph>
