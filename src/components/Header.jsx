@@ -4,7 +4,6 @@ import { Link, NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 import LogoWhite from "../assets/images/logo-white.png";
-import Agency from "../assets/images/agency.png";
 import Waves from "../assets/images/waves.svg";
 
 import Colors from "../utils/Colors";
@@ -28,16 +27,16 @@ export default function Header() {
         </NavbarWrapper>
         <Menu navbarIsOpen={navbarIsOpen}>
           <MenuItem>
-            <MenuLink to="/realisations">Réalisations</MenuLink>
+            <MenuLink href="#projects">Réalisations</MenuLink>
           </MenuItem>
           <MenuItem>
-            <MenuLink to="/agence">L'agence</MenuLink>
+            <MenuLink href="#agency">L'agence</MenuLink>
           </MenuItem>
           <MenuItem>
-            <MenuLink to="/services">Services</MenuLink>
+            <MenuLink href="#services">Services</MenuLink>
           </MenuItem>
           <MenuItem>
-            <MenuLink to="/contact">Contact</MenuLink>
+            <MenuLink href="#contact">Contact</MenuLink>
           </MenuItem>
         </Menu>
       </Navbar>
@@ -186,7 +185,7 @@ const Menu = styled.ul`
   }
 `;
 const MenuItem = styled.li``;
-const MenuLink = styled(NavLink)`
+const MenuLink = styled.a`
   text-decoration: none;
   color: white;
   transition: 0.2s;

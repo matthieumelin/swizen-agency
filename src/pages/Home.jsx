@@ -1,17 +1,16 @@
 import React from "react";
 
+import styled from "styled-components";
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import CalendarButton from "../components/CalendarButton";
-
-import styled from "styled-components";
-
-import Splash from "../assets/images/splash.svg";
-import AgencyBg from "../assets/images/agency2.png";
-
-import Colors from "../utils/Colors";
 import ServiceCard from "../components/ServiceCard";
 import ToolCard from "../components/ToolCard";
+
+import Colors from "../utils/Colors";
+
+import { Helmet } from "react-helmet-async";
 
 export default function Home({
   currentLocation,
@@ -19,17 +18,17 @@ export default function Home({
   tools,
   setCurrentLocation,
 }) {
-  const onSubmit = (event) => {
-    event.preventDefault();
-  };
   return (
     <StyledHome>
+      <Helmet>
+        <title>Agence web à Lens - Création de site internet | SWIZEN</title>
+      </Helmet>
       <Header
         currentLocation={currentLocation}
         setCurrentLocation={setCurrentLocation}
       />
       <Main>
-        <Agency>
+        <Agency id="agency">
           <Title align="center">
             L'agence <TitleSpan>Swizen</TitleSpan>
           </Title>
@@ -38,13 +37,13 @@ export default function Home({
             alt="L'agence"
           />
           <Description>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis
-            quaerat reprehenderit quasi molestias minus ipsa, excepturi
-            aspernatur veniam atque officia eveniet omnis ea harum cumque quos
-            alias corrupti beatae aliquid.
+            Swizen est une toute nouvelle agence web situé à Lens. Nous mettons
+            le relationnel au coeur de notre démarche, car chaque client est
+            différent et se doit d'être écouté et accompagné tout au long de son
+            projet.
           </Description>
         </Agency>
-        <Services>
+        <Services id="services">
           <Title align="center">
             Nos services d'<TitleSpan>agence web</TitleSpan>
           </Title>
@@ -75,10 +74,6 @@ export default function Home({
             })}
           </ToolsContent>
         </Tools>
-        <Contact>
-          <Title style={{color: "white"}}>Nous contactez</Title>
-          <Description></Description>
-        </Contact>
         <CalendarButton />
       </Main>
       <Footer />
@@ -97,7 +92,6 @@ const Description = styled.p`
 const Title = styled.h2`
   text-align: ${(props) => props.align};
   color: ${Colors.DarkGray};
-  margin: 0 0 20px 0;
 
   @media screen and (min-width: 1024px) {
     font-size: 2.5rem;
@@ -129,6 +123,7 @@ const Services = styled.section`
   @media screen and (min-width: 1024px) {
     padding: 60px 100px;
   }
+
 `;
 const ServicesContent = styled.div`
   display: grid;
@@ -143,17 +138,21 @@ const ServicesContent = styled.div`
   }
 `;
 const Tools = styled.section`
-padding: 20px;
+  padding: 20px 20px 0 20px;
 
-@media screen and (min-width: 1024px) {
-  padding: 60px 0;
-}
+  @media screen and (min-width: 1024px) {
+    padding: 30px 0;
+
+    ${Title} {
+      margin: 0;
+    }
+  }
 `;
 const ToolsContent = styled.div`
-margin: 30px 0 0 0;
+  margin: 30px 0 0 0;
 
-@media screen and (min-width: 1024px) {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
+  @media screen and (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;

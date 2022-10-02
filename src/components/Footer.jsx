@@ -79,7 +79,7 @@ export default function Footer() {
       <Copyright>
         <CopyrightText>
           Copyright © 2020 - 2022 Swizen Tous droits réservés -{" "}
-          <CopyrightLink to="/">Mentions Légales</CopyrightLink>
+          <CopyrightLink to="/legal">Mentions Légales</CopyrightLink>
         </CopyrightText>
       </Copyright>
     </StyledFooter>
@@ -156,6 +156,7 @@ const SectionMenuItem = styled.li`
   display: flex;
   align-items: center;
   color: white;
+  cursor: pointer;
 `;
 
 const SectionMenuLink = styled(Link)`
