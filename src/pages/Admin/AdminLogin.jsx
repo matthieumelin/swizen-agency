@@ -18,11 +18,12 @@ export default function AdminLogin() {
 
   const navigate = useNavigate();
 
-  const [inputs, setInputs] = useState({
+  const defaultInputs = {
     email: "",
     password: "",
     captcha: false,
-  });
+  };
+  const [inputs, setInputs] = useState(defaultInputs);
   const [error, setError] = useState("");
 
   const handleInput = (event) => {
@@ -36,6 +37,8 @@ export default function AdminLogin() {
   const onSubmit = async (event) => {
     event.preventDefault();
 
+    setError("");
+
     let tempError = "";
 
     if (!inputs.email || !inputs.password) {
@@ -46,7 +49,7 @@ export default function AdminLogin() {
 
     if (!tempError) {
       await axios
-        .post("http://193.26.121.190:3030/api/v1/user/signin", {
+        .post("https://api.swizen.fr:3030/api/v1/user/signin", {
           email: inputs.email,
           password: inputs.password,
         })
@@ -59,7 +62,7 @@ export default function AdminLogin() {
 
           navigate("/admin");
 
-          setInputs({ email: "", password: "", captcha: false });
+          setInputs(defaultInputs);
         })
         .catch((err) => {
           setError(err.response.data.message);

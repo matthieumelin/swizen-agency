@@ -10,6 +10,7 @@ import AdminDashboard from "./pages/Admin/AdminDashboard";
 import AdminLogin from "./pages/Admin/AdminLogin";
 import AdminLogout from "./pages/Admin/AdminLogout";
 import Legal from "./pages/Legal";
+import Contact from "./pages/Contact";
 
 export default function AppRouter() {
   const [currentLocation, setCurrentLocation] = useState("");
@@ -32,6 +33,7 @@ export default function AppRouter() {
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/admin/logout" element={<AdminLogout />} />
           <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/legal" element={<Legal />} />
           <Route path="/404" element={<NotFound />} />
           <Route

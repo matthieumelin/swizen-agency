@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 import styled from "styled-components";
 
@@ -10,7 +11,7 @@ import ToolCard from "../components/ToolCard";
 
 import Colors from "../utils/Colors";
 
-import { Helmet } from "react-helmet-async";
+import Office from "../assets/images/office.jpg";
 
 export default function Home({
   currentLocation,
@@ -33,10 +34,10 @@ export default function Home({
             L'agence <TitleSpan>Swizen</TitleSpan>
           </Title>
           <AgencyImage
-            src="https://img.freepik.com/premium-photo/modern-office-with-office-supplies-table-with-office-environment-background_67155-5307.jpg?w=2000"
+            src={Office}
             alt="L'agence"
           />
-          <Description>
+          <Description style={{maxWidth: 1024, margin: "20px auto 0 auto"}}>
             Swizen est une toute nouvelle agence web situé à Lens. Nous mettons
             le relationnel au coeur de notre démarche, car chaque client est
             différent et se doit d'être écouté et accompagné tout au long de son
@@ -47,7 +48,7 @@ export default function Home({
           <Title align="center">
             Nos services d'<TitleSpan>agence web</TitleSpan>
           </Title>
-          <Description>
+          <Description style={{maxWidth: 1024, margin: "20px auto 0 auto"}}>
             Pour répondre à tous vos besoins, Swizen propose une gamme de
             services complète. En tant qu'agence digitale, nous tâchons de vous
             accompagner dans votre projet du début à la fin.
@@ -103,6 +104,10 @@ const TitleSpan = styled.span`
 const Agency = styled.section`
   padding: 20px;
 
+  ${Title} {
+    margin-top: 0;
+  }
+
   @media screen and (min-width: 1024px) {
     padding: 60px 100px;
   }
@@ -141,7 +146,7 @@ const Tools = styled.section`
   padding: 20px 20px 0 20px;
 
   @media screen and (min-width: 1024px) {
-    padding: 30px 0;
+    padding: 60px 100px;
 
     ${Title} {
       margin: 0;

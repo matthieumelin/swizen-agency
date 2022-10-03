@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import styled from "styled-components";
 
@@ -18,7 +18,7 @@ export default function Header() {
             <NavbarLogo src={LogoWhite} alt="Swizen" />
           </NavbarLeft>
           <NavbarRight>
-            <NavbarButton to="/">Demander un devis</NavbarButton>
+            <NavbarButton to="/contact">Demander un devis</NavbarButton>
             <NavbarToggle
               navbarIsOpen={navbarIsOpen}
               onClick={() => setNavbarIsOpen(!navbarIsOpen)}
@@ -27,16 +27,16 @@ export default function Header() {
         </NavbarWrapper>
         <Menu navbarIsOpen={navbarIsOpen}>
           <MenuItem>
-            <MenuLink href="#projects">Réalisations</MenuLink>
+            <MenuLegacyLink href="#projects">Réalisations</MenuLegacyLink>
           </MenuItem>
           <MenuItem>
-            <MenuLink href="#agency">L'agence</MenuLink>
+            <MenuLegacyLink href="#agency">L'agence</MenuLegacyLink>
           </MenuItem>
           <MenuItem>
-            <MenuLink href="#services">Services</MenuLink>
+            <MenuLegacyLink href="#services">Services</MenuLegacyLink>
           </MenuItem>
           <MenuItem>
-            <MenuLink href="#contact">Contact</MenuLink>
+            <MenuLink href="/contact">Contact</MenuLink>
           </MenuItem>
         </Menu>
       </Navbar>
@@ -44,8 +44,7 @@ export default function Header() {
         <Wrapper>
           <About>
             <Title>
-              <TitleSpan>Swizen,</TitleSpan>
-              <Break /> Votre agence web à Lens
+              Votre agence web à Lens
             </Title>
             <Description>
               Design, Développement web, E-commerce, Maintenance & SEO.
@@ -185,7 +184,17 @@ const Menu = styled.ul`
   }
 `;
 const MenuItem = styled.li``;
-const MenuLink = styled.a`
+const MenuLegacyLink = styled.a`
+  text-decoration: none;
+  color: white;
+  transition: 0.2s;
+
+  &:hover {
+    margin: 0 0 5px 0;
+    transition: 0.2s;
+  }
+`;
+const MenuLink = styled(Link)`
   text-decoration: none;
   color: white;
   transition: 0.2s;
@@ -224,9 +233,6 @@ const Title = styled.h1`
   }
 `;
 const Break = styled.br``;
-const TitleSpan = styled.span`
-  color: ${Colors.DarkGray};
-`;
 const Description = styled.p`
   color: #fff;
   margin: 10px 0 0 0;

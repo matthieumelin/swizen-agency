@@ -1,7 +1,6 @@
 import React from "react";
 
 import styled from "styled-components";
-import Colors from "../utils/Colors";
 
 export default function ToolCard({ data }) {
   return (
@@ -19,6 +18,7 @@ const StyledToolCard = styled.article`
   @media screen and (min-width: 1024px) {
     border-right: 1px solid rgba(0, 0, 0, 0.1);
 
+    &:nth-child(2),
     &:last-child {
       border-right: none;
     }

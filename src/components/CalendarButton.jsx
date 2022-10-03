@@ -8,7 +8,7 @@ import { PopupButton } from "react-calendly";
 export default function CalendarButton() {
   return (
     <StyledCalendarButton
-      url="https://calendly.com/swizen/premiere-rencontre"
+      url="https://calendly.com/swizen/parlons-de-votre-projet"
       rootElement={document.getElementById("root")}
       text="Organiser une rencontre 🚀"
     />

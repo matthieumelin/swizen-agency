@@ -159,12 +159,6 @@ const SectionMenuItem = styled.li`
   cursor: pointer;
 `;
 
-const SectionMenuLink = styled(Link)`
-  text-decoration: none;
-  color: white;
-  font-weight: 300;
-`;
-
 const Copyright = styled.div`
   padding: 10px;
   background-color: ${Colors.DarkGray};
