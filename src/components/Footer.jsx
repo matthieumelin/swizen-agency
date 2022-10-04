@@ -72,6 +72,10 @@ export default function Footer() {
               >
                 &#62; LinkedIn
               </SectionMenuItem>
+              <SectionMenuItem onClick={() => window.open("https://www.facebook.com/profile.php?id=100086267746822",
+                "_blank")}>
+                &#62; Facebook
+              </SectionMenuItem>
             </SectionMenu>
           </Section>
         </Sections>

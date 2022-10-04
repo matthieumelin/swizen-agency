@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import styled from "styled-components";
 
@@ -14,7 +14,7 @@ export default function Header() {
     <StyledHeader>
       <Navbar>
         <NavbarWrapper>
-          <NavbarLeft>
+          <NavbarLeft to="/">
             <NavbarLogo src={LogoWhite} alt="Swizen" />
           </NavbarLeft>
           <NavbarRight>
@@ -139,7 +139,9 @@ const NavbarLogo = styled.img`
   display: block;
   max-width: 150px;
 `;
-const NavbarLeft = styled.div``;
+const NavbarLeft = styled(NavLink)`
+
+`;
 const NavbarRight = styled.div`
   display: flex;
   align-items: center;
