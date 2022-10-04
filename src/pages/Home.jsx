@@ -64,7 +64,7 @@ export default function Home({
             Découvrez nos
             <TitleSpan> expertises</TitleSpan>
           </Title>
-          <Description>
+          <Description style={{maxWidth: 1024, margin: "20px auto 0 auto"}}>
             Afin de vous délivrer le meilleur des services, nous travaillons
             avec des CMS et Framework existants. Nous voulons vous proposer la
             solution la plus adaptée à votre projet.
