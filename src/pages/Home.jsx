@@ -13,50 +13,39 @@ import Colors from "../utils/Colors";
 
 import Office from "../assets/images/office.jpg";
 
-export default function Home({
-  currentLocation,
-  services,
-  tools,
-  setCurrentLocation,
-}) {
+export default function Home({ services, tools }) {
   return (
     <StyledHome>
       <Helmet>
         <title>Agence web à Lens - Création de site internet | SWIZEN</title>
       </Helmet>
-      <Header
-        currentLocation={currentLocation}
-        setCurrentLocation={setCurrentLocation}
-      />
+      <Header />
       <Main>
         <Agency id="agency">
           <Title align="center">
             L'agence <TitleSpan>Swizen</TitleSpan>
           </Title>
-          <AgencyImage
-            src={Office}
-            alt="L'agence"
-          />
-          <Description style={{maxWidth: 1024, margin: "20px auto 0 auto"}}>
-            Swizen est une toute nouvelle agence web situé à Lens. Nous mettons
-            le relationnel au coeur de notre démarche, car chaque client est
-            différent et se doit d'être écouté et accompagné tout au long de son
-            projet.
+          <AgencyImage src={Office} alt="L'agence" />
+          <Description style={{ maxWidth: 1024, margin: "20px auto 0 auto" }}>
+            Swizen est une agence web situé à Lens. Nous mettons le relationnel
+            au coeur de notre démarche, car chaque client est différent et se
+            doit d'être écouté et accompagné tout au long de son projet.
           </Description>
         </Agency>
         <Services id="services">
           <Title align="center">
             Nos services d'<TitleSpan>agence web</TitleSpan>
           </Title>
-          <Description style={{maxWidth: 1024, margin: "20px auto 0 auto"}}>
+          <Description style={{ maxWidth: 1024, margin: "20px auto 0 auto" }}>
             Pour répondre à tous vos besoins, Swizen propose une gamme de
             services complète. En tant qu'agence digitale, nous tâchons de vous
             accompagner dans votre projet du début à la fin.
           </Description>
           <ServicesContent>
-            {services.map((service, key) => {
-              return <ServiceCard key={key} data={service} />;
-            })}
+            {services &&
+              services.map((service, key) => {
+                return <ServiceCard key={key} data={service} />;
+              })}
           </ServicesContent>
         </Services>
         <Tools>
@@ -64,15 +53,16 @@ export default function Home({
             Découvrez nos
             <TitleSpan> expertises</TitleSpan>
           </Title>
-          <Description style={{maxWidth: 1024, margin: "20px auto 0 auto"}}>
+          <Description style={{ maxWidth: 1024, margin: "20px auto 0 auto" }}>
             Afin de vous délivrer le meilleur des services, nous travaillons
             avec des CMS et Framework existants. Nous voulons vous proposer la
             solution la plus adaptée à votre projet.
           </Description>
           <ToolsContent>
-            {tools.map((tool, key) => {
-              return <ToolCard key={key} data={tool} />;
-            })}
+            {tools &&
+              tools.map((tool, key) => {
+                return <ToolCard key={key} data={tool} />;
+              })}
           </ToolsContent>
         </Tools>
         <CalendarButton />
@@ -128,7 +118,6 @@ const Services = styled.section`
   @media screen and (min-width: 1024px) {
     padding: 60px 100px;
   }
-
 `;
 const ServicesContent = styled.div`
   display: grid;

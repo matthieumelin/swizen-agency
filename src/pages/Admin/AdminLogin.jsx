@@ -198,8 +198,8 @@ const FormButton = styled.button`
   }
 `;
 const Error = styled.p`
-  color: #d00000;
-  border: 1px solid #d00000;
+  color: ${Colors.Red};
+  border: 1px solid ${Colors.Red};
   padding: 10px;
   text-align: center;
 `;

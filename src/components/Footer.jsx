@@ -14,7 +14,9 @@ export default function Footer() {
     <StyledFooter>
       <Content>
         <Wrapper>
-          <Logo src={LogoWhite} alt="Swizen" />
+          <Link to="/">
+            <Logo src={LogoWhite} alt="Swizen" />
+          </Link>
           <Description>
             Votre agence web à Lens spécialisée dans la création de internet.
           </Description>
@@ -55,6 +57,16 @@ export default function Footer() {
               <SectionMenuItem
                 onClick={() =>
                   window.open(
+                    "https://www.facebook.com/profile.php?id=100086267746822",
+                    "_blank"
+                  )
+                }
+              >
+                &#62; Facebook
+              </SectionMenuItem>
+              <SectionMenuItem
+                onClick={() =>
+                  window.open(
                     "https://www.instagram.com/swizen.agency",
                     "_blank"
                   )
@@ -71,10 +83,6 @@ export default function Footer() {
                 }
               >
                 &#62; LinkedIn
-              </SectionMenuItem>
-              <SectionMenuItem onClick={() => window.open("https://www.facebook.com/profile.php?id=100086267746822",
-                "_blank")}>
-                &#62; Facebook
               </SectionMenuItem>
             </SectionMenu>
           </Section>

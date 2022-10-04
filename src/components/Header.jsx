@@ -36,6 +36,9 @@ export default function Header() {
             <MenuLegacyLink href="#services">Services</MenuLegacyLink>
           </MenuItem>
           <MenuItem>
+            <MenuLegacyLink href="/tarifs">Tarifs</MenuLegacyLink>
+          </MenuItem>
+          <MenuItem>
             <MenuLink href="/contact">Contact</MenuLink>
           </MenuItem>
         </Menu>

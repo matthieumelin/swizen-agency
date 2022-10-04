@@ -61,8 +61,69 @@
   ],
   "prices": [
     {
-      "name": "",
-      "description": ""
+      "name": "Site vitrine",
+      "description": "Mettez en vitrine votre entreprise.",
+      "startPrice": "400 €",
+      "features": [
+        "Charte graphique pré-définie",
+        "Domaine + hébergement + e-mail pendant 12 mois",
+        "Interface administrateur",
+        "Site responsive (adapté à tous supports)",
+        "Mise en place du contenu (textes & images)",
+        "Formulaire de contact",
+        "Liens de partage sur les réseaux sociaux",
+        "Optimisation du référencement (SEO)",
+        "Statistiques de visite",
+        "Mise en ligne du site",
+        "Formation utilisation du site"
+      ]
+    },
+    {
+      "name": "Site vitrine sur mesure",
+      "description": "Personnalisée vos besoins sur mesure.",
+      "startPrice": "800 €",
+      "features": [
+        "Création charte graphique personnalisée",
+        "Proposition de logo",
+        "Domaine + hébergement + e-mail pendant 12 mois",
+        "Interface administrateur",
+        "Site responsive (adapté à tous supports)",
+        "Mise en place du contenu (textes & images)",
+        "Formulaire de contact",
+        "Liens de partage sur les réseaux sociaux",
+        "Optimisation du référencement (SEO) et des performances",
+        "Statistiques de visite",
+        "Mise en ligne du site",
+        "Formation utilisation du site"
+      ]
+    },
+    {
+      "name": "Site e-commerce",
+      "description": "Votre boutique personnalisée en ligne.",
+      "startPrice": "1500 €",
+      "features": [
+        "Création charte graphique personnalisée",
+        "Proposition de logo",
+        "Domaine + hébergement + e-mail pendant 12 mois",
+        "Interface administrateur",
+        "Site responsive (adapté à tous supports)",
+        "Mise en place du contenu (textes & images)",
+        "Formulaire de contact",
+        "Liens de partage sur les réseaux sociaux",
+        "Optimisation du référencement (SEO) et des performances",
+        "Statistiques de visite",
+        "Mise en ligne du site",
+        "Formation utilisation du site"
+      ]
+    },
+    {
+      "name": "Maintenance",
+      "description": "Nous gérons votre site internet.",
+      "startPrice": "180 € / an",
+      "features": [
+        "Mise à jour",
+        "Entretien du site"
+      ]
     }
   ]
 }

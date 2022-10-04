@@ -176,8 +176,8 @@ const FormButton = styled.button`
   }
 `;
 const Alert = styled.p`
-  color: ${(props) => props.type === "error" ? "#d00000" : "#55a630"};
-  border: 1px solid ${(props) => props.type === "error" ? "#d00000" : "#55a630"};
+  color: ${(props) => props.type === "error" ? Colors.Red : Colors.Green};
+  border: 1px solid ${(props) => props.type === "error" ? Colors.Red : Colors.Green};
   padding: 10px;
   text-align: center;
 `;

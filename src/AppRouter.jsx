@@ -11,18 +11,16 @@ import AdminLogin from "./pages/Admin/AdminLogin";
 import AdminLogout from "./pages/Admin/AdminLogout";
 import Legal from "./pages/Legal";
 import Contact from "./pages/Contact";
+import Price from "./pages/Price";
 
 export default function AppRouter() {
-  const [currentLocation, setCurrentLocation] = useState("");
-  const [services, setServices] = useState([]);
-  const [tools, setTools] = useState([]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     fetch("/data.json")
       .then((res) => res.json())
       .then((result) => {
-        setServices(result.services);
-        setTools(result.tools);
+        setData(result);
       });
   }, []);
 
@@ -33,19 +31,13 @@ export default function AppRouter() {
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/admin/logout" element={<AdminLogout />} />
           <Route path="/admin/login" element={<AdminLogin />} />
+          <Route path="/tarifs" element={<Price prices={data.prices} />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/legal" element={<Legal />} />
           <Route path="/404" element={<NotFound />} />
           <Route
             index
-            element={
-              <Home
-                currentLocation={currentLocation}
-                services={services}
-                tools={tools}
-                setCurrentLocation={setCurrentLocation}
-              />
-            }
+            element={<Home services={data.services} tools={data.tools} />}
           />
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -25,7 +25,7 @@ export default function Legal() {
           <ParagraphList>
             <ParagraphListItem>
               <ParagraphStrong>Propriétaire : </ParagraphStrong>
-              Swizen - 89191850000010, EURL auteur au capital de €. Le
+              Swizen - SIRET 89191850000010, EURL auteur au capital de €. Le
               propriétaire du site internet est joignable à cette adresse :
               m.melin@swizen.fr
             </ParagraphListItem>
