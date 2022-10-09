@@ -34,6 +34,7 @@ const StyledPriceCard = styled.article`
   box-shadow: 0px 0px 30px rgba(0 0 0 / 7%);
   height: 100%;
   position: relative;
+  border: 1px solid lightgray;
 `;
 const PriceCardHeader = styled.div`
   background-color: ${Colors.Blue};
@@ -52,7 +53,6 @@ const PriceCardDescription = styled.p`
 `;
 const PriceCardBody = styled.div`
   background-color: white;
-  border: 1px solid lightgray;
 `;
 const PriceCardAmount = styled.p`
 text-align: center;

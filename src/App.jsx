@@ -13,8 +13,11 @@ import Legal from "./pages/Legal";
 import Contact from "./pages/Contact";
 import Price from "./pages/Price";
 
-export default function AppRouter() {
+import Loading from "./components/Loading";
+
+export default function App() {
   const [data, setData] = useState([]);
+  const [appIsLoading, setAppIsLoading] = useState(true);
 
   useEffect(() => {
     fetch("/data.json")
@@ -22,7 +25,13 @@ export default function AppRouter() {
       .then((result) => {
         setData(result);
       });
+
+    setTimeout(() => {
+      setAppIsLoading(false);
+    }, 1000);
   }, []);
+
+  if (appIsLoading) return <Loading />;
 
   return (
     <Provider store={store}>
@@ -37,7 +46,14 @@ export default function AppRouter() {
           <Route path="/404" element={<NotFound />} />
           <Route
             index
-            element={<Home services={data.services} tools={data.tools} />}
+            element={
+              <Home
+                services={data.services}
+                tools={data.tools}
+                appIsLoading={appIsLoading}
+                setAppIsLoading={setAppIsLoading}
+              />
+            }
           />
           <Route path="*" element={<NotFound />} />
         </Routes>

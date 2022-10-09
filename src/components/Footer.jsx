@@ -7,6 +7,10 @@ import LogoWhite from "../assets/images/logo-white.png";
 import { ReactComponent as MailIcon } from "../assets/icons/mail-icon.svg";
 import { ReactComponent as MapPointerIcon } from "../assets/icons/map-pointer-icon.svg";
 import { ReactComponent as PhoneIcon } from "../assets/icons/phone-icon.svg";
+import { ReactComponent as FacebookIcon } from "../assets/icons/facebook-icon.svg";
+import { ReactComponent as InstagramIcon } from "../assets/icons/instagram-icon.svg";
+import { ReactComponent as LinkedInIcon } from "../assets/icons/linkedin-icon.svg";
+
 import Colors from "../utils/Colors";
 
 export default function Footer() {
@@ -62,7 +66,11 @@ export default function Footer() {
                   )
                 }
               >
-                &#62; Facebook
+                <FacebookIcon
+                  fill="white"
+                  style={{ width: 22, margin: "0 5px 0 0" }}
+                />
+                Facebook
               </SectionMenuItem>
               <SectionMenuItem
                 onClick={() =>
@@ -72,7 +80,11 @@ export default function Footer() {
                   )
                 }
               >
-                &#62; Instagram
+                <InstagramIcon
+                  fill="white"
+                  style={{ width: 22, margin: "0 5px 0 0" }}
+                />
+                Instagram
               </SectionMenuItem>
               <SectionMenuItem
                 onClick={() =>
@@ -82,7 +94,11 @@ export default function Footer() {
                   )
                 }
               >
-                &#62; LinkedIn
+                <LinkedInIcon
+                  fill="white"
+                  style={{ width: 22, margin: "0 5px 0 0" }}
+                />
+                LinkedIn
               </SectionMenuItem>
             </SectionMenu>
           </Section>
@@ -90,7 +106,7 @@ export default function Footer() {
       </Content>
       <Copyright>
         <CopyrightText>
-          Copyright © 2020 - 2022 Swizen Tous droits réservés -{" "}
+          Copyright © 2020 - 2022 SWIZEN Tous droits réservés -{" "}
           <CopyrightLink to="/legal">Mentions Légales</CopyrightLink>
         </CopyrightText>
       </Copyright>

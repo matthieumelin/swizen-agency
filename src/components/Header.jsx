@@ -27,19 +27,19 @@ export default function Header() {
         </NavbarWrapper>
         <Menu navbarIsOpen={navbarIsOpen}>
           <MenuItem>
-            <MenuLegacyLink href="#projects">Réalisations</MenuLegacyLink>
+            <MenuLegacyLink href="/#projects">Réalisations</MenuLegacyLink>
           </MenuItem>
           <MenuItem>
-            <MenuLegacyLink href="#agency">L'agence</MenuLegacyLink>
+            <MenuLegacyLink href="/#agency">L'agence</MenuLegacyLink>
           </MenuItem>
           <MenuItem>
-            <MenuLegacyLink href="#services">Services</MenuLegacyLink>
+            <MenuLegacyLink href="/#services">Services</MenuLegacyLink>
           </MenuItem>
           <MenuItem>
             <MenuLegacyLink href="/tarifs">Tarifs</MenuLegacyLink>
           </MenuItem>
           <MenuItem>
-            <MenuLink href="/contact">Contact</MenuLink>
+            <MenuLink to="/contact">Contact</MenuLink>
           </MenuItem>
         </Menu>
       </Navbar>

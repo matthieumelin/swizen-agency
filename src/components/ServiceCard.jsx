@@ -28,6 +28,7 @@ const ServiceCardIcon = styled.img`
 display: block;
 width: 42px;
 margin: 0 auto;
+pointer-events: none;
 `;
 const ServiceCardTitle = styled.h3`
 text-align: center;
